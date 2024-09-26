@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# Laundry-Bit
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An alternative application to circuit laundry that provides a much better experience to the users. A proposed and intuitive user interface for the user to happily experience exceptional services.
 
-## Get started
+## Prerequisites
 
-1. Install dependencies
+The circuit laundry (at the time of this writing) has a rating of 1.1/5 stars in both the apple iOS and google App Store. Some of the common complaints include:
 
-   ```bash
-   npm install
-   ```
+1. The users cannot save personal banking information onto the app.
+2. There are no functionalities for having a look at previous transactions.
+3. No access to in-app digital receipts for each transaction.
+4. Users have to pay in a minimum of £5 in order to use the services.
+5. Bad UI/UX.
+6. No third-party authentication systems (Auth0, firebase, etc)
 
-2. Start the app
 
-   ```bash
-    npx expo start
-   ```
+## What is the purpose of the app i want to build?
 
-In the output, you'll find options to open the app in a
+I want to provide better service to the users, with good UI/UX provided. This will be achieved by reducing cognitive load.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Create a good user story/flow from the point of installation to the end of the service. make it satisfactory.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+I want to retain my users.
 
-## Get a fresh project
+# The MVP (Minimal Viable Product)
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+## Requirements
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1. Camera / QR Code scanner to scan laundry machine.
+2. Storage for bank card information.
+3. Good skeuomorphic design.
+4. Transaction list.
+5. Have a wash/cycle progression interface. this will be a list too.
+6. Variety of user authentication. (Email/password, googleAuth, appleAuth)
+7. Allow the application to handle payments through the stripe API
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## Data Flow
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. User registers.
+2. User logs in.
+3. user has the option to either start a wash or to pay.
+4. if user decides to wash, then the app checks if the user has sufficient funds to wash.
+5. if not, then the user must pay to use machines.
+6. the user can than pay for the washer/dryer.
